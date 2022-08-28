@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tes Sertifikasi Dosen</string>
+    <string name="password_not_match">Kata Sandi tidak cocok!</string>
+    <string name="email_not_valid">Email is not valid email!</string>
+    <string name="password_cannot_empty">Kata Sandi tidak boleh kosong!</string>
+    <string name="email_cannot_empty">Email tidak boleh kosong!</string>
+    <string name="forgot_password">Lupa Kata Sandi?</string>
+
+    <string name="register">Lupa Kata Sandi?</string>
+    <string name="register_here">Daftar di sini</string>
+
+    <string name="login">Sudah Punya Akun?</string>
+    <string name="login_here">Masuk di sini</string>
+
+    <string name="reset_here">Atur ulang</string>
+
+    <string name="btn_sign_up">Daftar</string>
+    <string name="login_to_your_account">Masuk ke akun Anda</string>
+
+    <string name="placeholder_email">nama@trian.app</string>
+    <string name="label_input_email">Email</string>
+
+
+
+    <string name="placeholder_password">Kata sandi Anda</string>
+    <string name="label_input_password">Kata Sandi</string>
+    <string name="or">atau</string>
+    <string name="btn_login_with_google">Masuk dengan Google</string>
+    <string name="please_read_our">\"Mohon untuk membaca \"</string>
+    <string name="privacy_policy">privacy policy</string>
+    <string name="before_continue">\" sebelum melanjutkan\"</string>
+    <string name="appbar_title_register">Mendaftar</string>
+    <string name="create_your_account">Buat akun anda</string>
+    <string name="subtitle_page_register">Keep your financial data store to our server so that you can access from anywhere you want</string>
+    <string name="placeholder_name">Nama Anda</string>
+    <string name="label_input_name">Nama lengkap</string>
+    <string name="content_description_image_page_register">Image Page Register</string>
+    <string name="name_cannot_empty">Nama tidak boleh kosong!</string>
+    <string name="btn_get_started">Mulai sekarang</string>
+
+    <string name="title_onboard_1">Pantau ODP</string>
+    <string name="message_onboard_1">Aplikasi untuk Orang Dalam Pemantauan(ODP).</string>
+    <string name="title_onboard_2">Update</string>
+    <string name="message_onboard_2">Mencatat warga dari luar Negeri mapun dari luar Kota.</string>
+    <string name="title_onboard_3">Menyalurkan</string>
+    <string name="message_onboard_3">Membantu DINSOS dan DINKES dlaam penyaluran bantuan sosial dan kesehatan.</string>
+
+    <string name="content_description_image_page_dashboard">Image Page Onboard</string>
+    <string name="register_success_verify_email">Your account has been create, please verify your email</string>
+    <string name="content_description_imaeg_page_login">Image Page Login</string>
+    <string name="email_has_sended">Password has been send to %1$s  please check your inbox</string>
+    <string name="btn_login">Login</string>
+    <string name="subtitle_reset_password">Kami akan mengirim Kata Sandi baru ke email Anda</string>
+    <string name="title_reset_password">Atur ulang Kata Sandi</string>
+    <string name="content_description_change_password">Gambar atur ulang kata sandi</string>
+
+    <string name="confirm_password_cannot_empty">Konfirmasi sandi tidak boleh kosong!</string>
+    <string name="success_change_password">Ubah kata sandi berhasil!</string>
+    <string name="appbar_title_change_password">Ubah Kata Sandi</string>
+    <string name="content_description_image_change_password">Gambar ubah kata sandi</string>
+    <string name="title_change_password">Ubah kata sandi</string>
+    <string name="subtitle_page_change_password">Amankan akun Anda dengan mengganti kata sandi secara berkala</string>
+    <string name="placeholder_new_password">Masukkan Sandi baru</string>
+    <string name="label_input_new_password">Sandi baru</string>
+    <string name="placeholder_confirm_password">Konfirmasi Sandi baru</string>
+    <string name="label_input_confirm_password">Konfirmasi Sandi baru</string>
+
+
+    <string name="content_description_page_profile">gambar profil</string>
+    <string name="btn_update">Esit</string>
+    <string name="label_email">Email</string>
+    <string name="label_date_of_birth">Tanggal lahir</string>
+
+<!--    odp  -->
+    <string name="label_input_petugas_name">Nama</string>
+    <string name="placeholder_petugas_name">John</string>
+    <string name="label_input_petugas_nip">NIP</string>
+    <string name="placeholder_petugas_nip">64031xxxx</string>
+    <string name="label_input_petugas_opd">OPD</string>
+    <string name="placeholder_petugas_opd">000xxx</string>
+    <string name="label_input_petugas_email">Email</string>
+    <string name="placeholder_petugas_email">trian@trian.app</string>
+    <string name="label_input_petugas_desa">Desa Penugasan</string>
+    <string name="placeholder_petugas_desa">Purwokerto selatan</string>
+    <string name="label_input_petugas_date_of_birth">Tanggal Lahir</string>
+    <string name="placeholder_petugas_date_of_birth">Masukkan Tanggal Lahir</string>
+
+    <string name="label_input_warga_nama">Nama</string>
+    <string name="placeholder_warga_nama">John</string>
+    <string name="label_input_warga_agama">Agama</string>
+    <string name="placeholder_warga_agama">misal:Islam</string>
+    <string name="label_input_warga_nik">NIK</string>
+    <string name="placeholder_warga_nik">56xxx</string>
+    <string name="label_input_warga_tempat_lahir">Tempat Lahir</string>
+    <string name="placeholder_warga_tempat_lahir">banyumas</string>
+    <string name="label_input_warga_tanggal_lahir">Tanggal Lahir</string>
+    <string name="placeholder_warga_tanggal_lahir">01–09-1998</string>
+    <string name="label_input_warga_alamat">Alamat</string>
+    <string name="placeholder_warga_alamat">Jl. bla bla</string>
+    <string name="label_input_warga_rw">RW</string>
+    <string name="placeholder_warga_rw">xx</string>
+    <string name="label_input_warga_rt">RT</string>
+    <string name="placeholder_warga_rt">xx</string>
+    <string name="label_input_warga_pekerjaan">Pekerjaan</string>
+    <string name="placeholder_warga_pekerjaan">Masukkan Pekerjaan</string>
+    <string name="label_input_warga_no_telp">No.Telp</string>
+    <string name="placeholder_warga_no_telp">08xxxx</string>
+    <string name="label_input_warga_kondisi">Kondisi</string>
+    <string name="placeholder_warga_kondisi">Masukkan kondisi</string>
+
+
+    <string name="appbar_title_form_user">Tambah Petugas</string>
+    <string name="content_description_image_form_user">Tambahkan data petugas baru</string>
+    <string name="title_page_form_user">Tambahkan petugas baru</string>
+    <string name="appbar_title_form_warga">Form ODP</string>
+    <string name="label_nip">NIP</string>
+    <string name="label_opd">OPD</string>
+    <string name="content_description_image_form_odp">Input warga dipantau</string>
+    <string name="title_page_form_monitoring">Input data warga dipantau</string>
+    <string name="label_input_warga_nama_wilayah_perjalanan">Nama daerah/negara</string>
+    <string name="placeholder_input_warga_nama_wilayah_perjalanan">Nama daerah/negara</string>
+    <string name="text_confirmation_signout">Apakah Anda yakin keluar dari applikasi?</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_signout">Keluar</string>
+    <string name="txt_app_label">Pantau ODP</string>
+    <string name="txt_title_screen_setting">Pengaturan</string>
+    <string name="content_description_icon_back">Kembali ke halaman sebelumnya</string>
+    <string name="txt_title_change_password">Ubah password</string>
+    <string name="txt_btn_help">Bantuan</string>
+    <string name="txt_banner_setting">Kelola pengaturan</string>
+    <string name="txt_banner_setting_title">Pengaturan aplikasi</string>
+    <string name="txt_title_page_list_citizen">List Warga</string>
+    <string name="txt_empty_list_citizen">TIdak ada data warga odp</string>
+    <string name="txt_title_list_officer">List Petugas</string>
+    <string name="txt_empty_state_list_officer">Tidak ada data pemantau</string>
+    <string name="content_description_close">Close</string>
+    <string name="txt_message_screen_success_user">Berhasil!</string>
+    <string name="txt_message_subtitle_screen_success_user">Berhasil menambahkan data Pemantau!</string>
+    <string name="label_success_user_name">Nama</string>
+    <string name="label_success_user_email">Email</string>
+    <string name="label_success_user_place_of_duty">Penugasan</string>
+    <string name="label_success_user_opd">OPD</string>
+    <string name="label_success_user_level">Level</string>
+    <string name="label_success_user_nip">NIP</string>
+    <string name="txt_title_page_detail_officer">Detail Petugas</string>
+    <string name="txt_label_detail_officer_name">Nama</string>
+    <string name="txt_label_detail_officer_nip">NIP</string>
+    <string name="txt_label_detail_officer_opd">OPD</string>
+    <string name="txt_label_detail_officer_level">Jabatan</string>
+    <string name="txt_label_detail_officer_created_at">Di daftarkan pada:</string>
+    <string name="txt_label_detail_officer_assignment">Penugasan</string>
+    <string name="txt_btn_edit">Edit</string>
+    <string name="txt_btn_delete">Hapus</string>
+    <string name="txt_title_page_detail_citizen">Detail Warga</string>
+    <string name="txt_btn_assessment">Assesment</string>
+    <string name="txt_title_dialog_pick_address">Pilih nama wilayah</string>
+
+<!--    new -->
+    <string name="txt_title_screen_detail_test">Detail test</string>
+    <string name="txt_btn_start">Start Test</string>
+</resources>
