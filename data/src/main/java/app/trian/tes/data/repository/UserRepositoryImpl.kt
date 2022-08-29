@@ -28,7 +28,7 @@ class UserRepositoryImpl(
                 emit(Pair(false,"Login Gagal!"))
             }
         }catch (e:Exception){
-            emit(Pair(false,"${e.message}"))
+            throw e
         }
     }.flowOn(dispatcherProvider.io())
 
@@ -58,13 +58,18 @@ class UserRepositoryImpl(
 
 
         }catch (e:Exception){
-            emit(Pair(false,"${e.message}"))
+           throw e
         }
     }.flowOn(dispatcherProvider.io())
 
-    override suspend fun resetPassword(email: String): Flow<Pair<Boolean, String>> {
-        TODO("Not yet implemented")
-    }
+    override suspend fun resetPassword(email: String): Flow<Pair<Boolean, String>> = flow {
+        try {
+             firebaseAuth.sendPasswordResetEmail(email).await()
+            emit(Pair(true,"Reset password sudah dikirim ke email anda!"))
+        }catch (e:Exception){
+           throw e
+        }
+    }.flowOn(dispatcherProvider.io())
 
     override suspend fun isUserLoggedIn(): Boolean {
         return firebaseAuth.currentUser != null

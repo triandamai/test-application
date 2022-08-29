@@ -66,15 +66,10 @@ class MainActivity : ComponentActivity() {
                         startDestination = Routes.Splash
                     ) {
                         routeSplash(router)
-
                         routeOnboard(router)
-
                         routeResetPassword(router)
-
                         routeLogin(router)
-
                         routerRegister(router)
-
                         navigation(
                             route = Routes.Main.MAIN,
                             startDestination = Routes.Main.Home
@@ -82,16 +77,11 @@ class MainActivity : ComponentActivity() {
                             routeHome(router)
                             routeProfile(router)
                         }
-
                         routeDetailTest( router)
-
                         routeTest(router)
-
                         routeFinishTest(router)
                     }
             }
-
-
         }
     }
 
