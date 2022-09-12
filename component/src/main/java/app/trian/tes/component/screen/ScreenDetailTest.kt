@@ -2,16 +2,21 @@ package app.trian.tes.component.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import app.trian.tes.component.*
 import app.trian.tes.component.R
 import app.trian.tes.component.theme.TestTheme
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.material.shimmer
+import com.google.accompanist.placeholder.placeholder
 import compose.icons.Octicons
 import compose.icons.octicons.ArrowLeft24
 
@@ -22,15 +27,22 @@ import compose.icons.octicons.ArrowLeft24
  * site https://trian.app
  */
 data class DetailTestUIState(
-    var loading:Boolean = false,
+    var loading:Boolean = true,
     var error:Boolean = false,
-    var errorMessage:String = ""
+    var errorMessage:String = "",
+
+    var title:String="Lorem Ipsum",
+    var description:String="Lorem Ipsum",
+    var createdAt:String="Lorem Ipsum",
+    var updatedAt:String="Lorem Ipsum",
+    var category:String="Lorem Ipsum",
+    var creator:String="Lorem Ipsum"
 
 )
 @Composable
 fun ScreenDetailTest(
     modifier: Modifier = Modifier,
-    state:DetailTestUIState=DetailTestUIState(),
+    uiState:DetailTestUIState=DetailTestUIState(),
     onBackPressed:()->Unit={},
     onStartTest:(String)->Unit = {}
 ) {
@@ -71,43 +83,53 @@ fun ScreenDetailTest(
             ) {
                 Column {
                     Text(
-                        text = stringResource(R.string.txt_label_detail_officer_name),
+                        text = stringResource(R.string.txt_label_detail_test_title),
                         style = MaterialTheme.typography.caption.copy(
                             color = MaterialTheme.colors.onSurface
+                        ),
+                        modifier=modifier.placeholder(
+                            visible = uiState.loading,
+                            highlight = PlaceholderHighlight.shimmer(),
+                            color = Color.LightGray,
+                            shape = RoundedCornerShape(8.dp)
                         )
                     )
                     Spacer(modifier = modifier.height(10.dp))
                     Text(
-                        text = "Lorem ipsum",
-                        style = MaterialTheme.typography.body1
+                        text = uiState.title,
+                        style = MaterialTheme.typography.body1,
+                        modifier=modifier.placeholder(
+                            visible = uiState.loading,
+                            highlight = PlaceholderHighlight.shimmer(),
+                            color = Color.LightGray,
+                            shape = RoundedCornerShape(8.dp)
+                        )
                     )
                 }
                 Spacer(modifier = modifier.height(30.dp))
                 Column {
                     Text(
-                        text = stringResource(R.string.txt_label_detail_officer_nip),
+                        text = stringResource(R.string.txt_label_detail_test_creator),
                         style = MaterialTheme.typography.caption.copy(
                             color = MaterialTheme.colors.onSurface
+                        ),
+                        modifier=modifier.placeholder(
+                            visible = uiState.loading,
+                            highlight = PlaceholderHighlight.shimmer(),
+                            color = Color.LightGray,
+                            shape = RoundedCornerShape(8.dp)
                         )
                     )
                     Spacer(modifier = modifier.height(10.dp))
                     Text(
-                        text = "Lorem ipsum",
-                        style = MaterialTheme.typography.body1
-                    )
-                }
-                Spacer(modifier = modifier.height(30.dp))
-                Column {
-                    Text(
-                        text = stringResource(R.string.txt_label_detail_officer_opd),
-                        style = MaterialTheme.typography.caption.copy(
-                            color = MaterialTheme.colors.onSurface
+                        text = uiState.creator,
+                        style = MaterialTheme.typography.body1,
+                        modifier=modifier.placeholder(
+                            visible = uiState.loading,
+                            highlight = PlaceholderHighlight.shimmer(),
+                            color = Color.LightGray,
+                            shape = RoundedCornerShape(8.dp)
                         )
-                    )
-                    Spacer(modifier = modifier.height(10.dp))
-                    Text(
-                        text = "Lorem ipsum",
-                        style = MaterialTheme.typography.body1
                     )
                 }
                 Spacer(modifier = modifier.height(30.dp))
@@ -120,15 +142,27 @@ fun ScreenDetailTest(
                 ){
                     Column {
                         Text(
-                            text = stringResource(R.string.txt_label_detail_officer_level),
+                            text = stringResource(R.string.txt_label_detail_test_category),
                             style = MaterialTheme.typography.caption.copy(
                                 color = MaterialTheme.colors.onSurface
+                            ),
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
                             )
                         )
                         Spacer(modifier = modifier.height(10.dp))
                         Text(
-                            text = "Lorem ipsum",
-                            style = MaterialTheme.typography.body1
+                            text = uiState.category,
+                            style = MaterialTheme.typography.body1,
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
+                            )
                         )
                     }
                     Column(
@@ -144,15 +178,27 @@ fun ScreenDetailTest(
                     }
                     Column {
                         Text(
-                            text = stringResource(R.string.txt_label_detail_officer_created_at),
+                            text = stringResource(R.string.txt_label_detail_test_created_at),
                             style = MaterialTheme.typography.caption.copy(
                                 color = MaterialTheme.colors.onSurface
+                            ),
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
                             )
                         )
                         Spacer(modifier = modifier.height(10.dp))
                         Text(
-                            text = "2 Sept 2022",
-                            style = MaterialTheme.typography.body1
+                            text = uiState.createdAt,
+                            style = MaterialTheme.typography.body1,
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
+                            )
                         )
                     }
                 }
@@ -171,15 +217,27 @@ fun ScreenDetailTest(
                 ) {
                     Column {
                         Text(
-                            text = stringResource(R.string.txt_label_detail_officer_assignment),
+                            text = stringResource(R.string.txt_label_detail_test_description),
                             style = MaterialTheme.typography.caption.copy(
                                 color = MaterialTheme.colors.onSurface
+                            ),
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
                             )
                         )
                         Spacer(modifier = modifier.height(10.dp))
                         Text(
-                            text = "Lorem ipsum",
-                            style = MaterialTheme.typography.body1
+                            text = uiState.description,
+                            style = MaterialTheme.typography.body1,
+                            modifier=modifier.placeholder(
+                                visible = uiState.loading,
+                                highlight = PlaceholderHighlight.shimmer(),
+                                color = Color.LightGray,
+                                shape = RoundedCornerShape(8.dp)
+                            )
                         )
                     }
                 }
@@ -192,7 +250,13 @@ fun ScreenDetailTest(
                     color = MaterialTheme.colors.primary,
                     onClick = {
                        onStartTest("SGas")
-                    }
+                    },
+                    modifier=modifier.placeholder(
+                        visible = uiState.loading,
+                        highlight = PlaceholderHighlight.shimmer(),
+                        color = Color.LightGray,
+                        shape = RoundedCornerShape(8.dp)
+                    )
                 )
             }
         }
@@ -204,8 +268,8 @@ fun ScreenDetailTest(
 fun PreviewScreenDetailTest() {
     TestTheme {
         ScreenDetailTest(
-            state = DetailTestUIState(
-                loading = false,
+            uiState = DetailTestUIState(
+                loading = true,
                 error = false,
             )
         )

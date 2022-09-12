@@ -8,14 +8,14 @@
 - RandUID
   - Title
   - Description
-  - CurrentVersion
+  - Creator
+  - Category
   - CreatedAt
   - UpdatedAt
 
 # Question
 - RandUID
   - TestUID
-  - VERSION
   - Question
   - Answer
   - options
@@ -24,12 +24,14 @@
 - RandUID
   - UserUID
   - TestUID
-  - 
-  - VERSION(COLLECTION)
-    - QuestionID
-    - Answer
-    - isCorrect
+  - testName
+  - percentage
+    - ANSWER
+      - RandUID 
+        - QuestionID
+        - Answer
+        - isCorrect
   - CreatedAt
   - UpdatedAt
-    
+
 

@@ -9,6 +9,6 @@ interface ProgressRepository {
 
     suspend fun getListAnswered(testUID:String):Flow<List<UserAnswer>>
 
-    suspend fun saveAnswer(questionUID:String,answer:String,isCorrect:Boolean):Flow<Pair<Boolean,String>>
+    suspend fun saveAnswer(testUId:String,questionUID:String,answer:String,isCorrect:Boolean):Flow<Pair<Boolean,String>>
 
 }

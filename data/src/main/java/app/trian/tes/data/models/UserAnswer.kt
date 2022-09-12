@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName
 @Keep
 data class UserAnswer(
     @SerializedName("questionUID")
-    var questionUID:String,
+    var questionUID:String="",
     @SerializedName("answer")
-    var answer:String,
+    var answer:String="",
     @SerializedName("isCorrect")
-    var isCorrect:Boolean
+    var isCorrect:Boolean=false
 )

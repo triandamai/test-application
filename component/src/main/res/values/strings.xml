@@ -144,13 +144,14 @@
     <string name="label_success_user_opd">OPD</string>
     <string name="label_success_user_level">Level</string>
     <string name="label_success_user_nip">NIP</string>
+
     <string name="txt_title_page_detail_officer">Detail Petugas</string>
-    <string name="txt_label_detail_officer_name">Nama</string>
-    <string name="txt_label_detail_officer_nip">NIP</string>
+    <string name="txt_label_detail_test_title">Nama Test</string>
+    <string name="txt_label_detail_test_creator">Dibuat oleh</string>
     <string name="txt_label_detail_officer_opd">OPD</string>
-    <string name="txt_label_detail_officer_level">Jabatan</string>
-    <string name="txt_label_detail_officer_created_at">Di daftarkan pada:</string>
-    <string name="txt_label_detail_officer_assignment">Penugasan</string>
+    <string name="txt_label_detail_test_category">Kategori</string>
+    <string name="txt_label_detail_test_created_at">Di buat:</string>
+    <string name="txt_label_detail_test_description">Deskripsi</string>
     <string name="txt_btn_edit">Edit</string>
     <string name="txt_btn_delete">Hapus</string>
     <string name="txt_title_page_detail_citizen">Detail Warga</string>

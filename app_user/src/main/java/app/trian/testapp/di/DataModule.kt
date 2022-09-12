@@ -4,7 +4,11 @@ package app.trian.testapp.di
 import android.content.Context
 import app.trian.tes.data.coroutines.DefaultDispatcherProvider
 import app.trian.tes.data.coroutines.DispatcherProvider
+import app.trian.tes.data.repository.ProgressRepositoryImpl
+import app.trian.tes.data.repository.TestRepositoryImpl
 import app.trian.tes.data.repository.UserRepositoryImpl
+import app.trian.tes.data.repository.design.ProgressRepository
+import app.trian.tes.data.repository.design.TestRepository
 import app.trian.tes.data.repository.design.UserRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,19 +35,7 @@ object DataModule {
     internal fun provideDispatcherProvider(): DispatcherProvider = DefaultDispatcherProvider()
 
 
-    //datasource
-    //repo
-    @Provides
-    internal fun provideUserRepository(
-        dispatcherProvider: DispatcherProvider,
-        firebaseAuth: FirebaseAuth,
-        firestore: FirebaseFirestore,
 
-    ): UserRepository = UserRepositoryImpl(
-        dispatcherProvider = dispatcherProvider,
-        firebaseAuth=firebaseAuth,
-        firestore = firestore
-    )
 
 
     //firebase
@@ -56,7 +48,40 @@ object DataModule {
     @Provides
     fun provideFirestore(): FirebaseFirestore = FirebaseFirestore.getInstance()
 
+    //datasource
+    //repo
+    @Provides
+    fun provideTestRepository(
+        dispatcherProvider: DispatcherProvider,
+        firestore: FirebaseFirestore,
+        firebaseAuth: FirebaseAuth,
+    ):TestRepository = TestRepositoryImpl(
+        dispatcherProvider = dispatcherProvider,
+        firestore = firestore,
+        firebaseAuth = firebaseAuth
+    )
 
+    @Provides
+    fun provideUserRepository(
+        dispatcherProvider: DispatcherProvider,
+        firestore: FirebaseFirestore,
+        firebaseAuth: FirebaseAuth
+    ):UserRepository = UserRepositoryImpl(
+        dispatcherProvider = dispatcherProvider,
+        firestore = firestore,
+        firebaseAuth = firebaseAuth
+    )
+
+    @Provides
+    fun provideProgressRepository(
+        dispatcherProvider: DispatcherProvider,
+        firestore: FirebaseFirestore,
+        firebaseAuth: FirebaseAuth
+    ):ProgressRepository = ProgressRepositoryImpl(
+        dispatcherProvider = dispatcherProvider,
+        firestore = firestore,
+        firebaseAuth = firebaseAuth
+    )
 
 
 }

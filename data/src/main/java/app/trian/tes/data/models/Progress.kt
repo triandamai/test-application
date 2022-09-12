@@ -6,15 +6,15 @@ import com.google.gson.annotations.SerializedName
 @Keep
 data class Progress(
     @SerializedName("userUID")
-    var userUID:String,
+    var userUID:String="",
     @SerializedName("testUID")
-    var testUID:String,
+    var testUID:String="",
     @SerializedName("testName")
-    var testName:String,
+    var testName:String="",
     @SerializedName("percentage")
-    var percentage:Int,
+    var percentage:Int=0,
     @SerializedName("createdAt")
-    var createdAt:Long,
+    var createdAt:Long=0,
     @SerializedName("updatedAt")
-    var updatedAt:Long
+    var updatedAt:Long=0
 )

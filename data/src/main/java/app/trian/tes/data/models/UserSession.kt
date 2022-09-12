@@ -6,11 +6,11 @@ import com.google.gson.annotations.SerializedName
 @Keep
 data class UserSession(
     @SerializedName("email")
-    var email:String,
+    var email:String="",
     @SerializedName("name")
-    var name:String,
+    var name:String="",
     @SerializedName("createdAt")
-    var createdAt:Long,
+    var createdAt:Long=0,
     @SerializedName("updatedAt")
-    var updatedAt:Long,
+    var updatedAt:Long=0,
 )

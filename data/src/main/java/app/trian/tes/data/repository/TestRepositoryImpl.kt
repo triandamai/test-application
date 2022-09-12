@@ -27,7 +27,8 @@ class TestRepositoryImpl(
                 .get()
                 .await()
             val finalList = listTest.documents.map {
-                it.toObject(Test::class.java)!!
+                it.toObject(Test::class.java)!!.copy(testUID = it.id)
+
             }
             emit(finalList)
         }catch (e:Exception){

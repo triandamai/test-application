@@ -17,6 +17,7 @@ import app.trian.tes.component.ItemStat
 import app.trian.tes.component.theme.TestTheme
 import app.trian.tes.component.utils.from
 import app.trian.tes.component.utils.gridItems
+import app.trian.tes.data.models.Test
 import compose.icons.Octicons
 import compose.icons.octicons.DiffRenamed16
 import compose.icons.octicons.Quote24
@@ -28,24 +29,12 @@ import kotlinx.coroutines.launch
  * created_at 09/03/22 - 21.21
  * site https://trian.app
  */
-data class MonitoringUIState(
+data class HomeUIState(
     var loading:Boolean =true,
     var error:Boolean=false,
     var errorMessage:String="n/a",
 
-    var odp:String="n/a",
-    var odpOnMonitoring:String="n/a",
-    var odpFinish:String="n/a",
-
-    var pdp:String="n/a",
-    var pdpLabNegative:String="n/a",
-    var pdpWaiting:String="n/a",
-    var pdpDied:String="n/a",
-
-    var positive:String="n/a",
-    var positiveOnTreated:String="n/a",
-    var positiveCured:String="n/a",
-    var positiveDied:String="n/a"
+    var data:List<Test> = listOf()
 )
 
 @Composable
@@ -53,7 +42,7 @@ fun ScreenHome(
     modifier: Modifier = Modifier,
     router: NavHostController,
     menus:List<ItemMenuDrawer> = listOf(),
-    monitoring:MonitoringUIState= MonitoringUIState(),
+    uiState:HomeUIState= HomeUIState(),
     userName:String="",
     onFabClicked:()->Unit={},
     onDetailTest:(String)->Unit={},
@@ -106,17 +95,17 @@ fun ScreenHome(
                 )
             ){
                 gridItems(
-                    data = listOf<String>("TOEFL","TOEP"),
+                    data = uiState.data,
                     columnCount = 2,
                     horizontalArrangement = Arrangement.Center
                 ){
                     ItemStat(
-                        name = it,
+                        name = it.title,
                         icon=Octicons.DiffRenamed16,
-                        value = monitoring.odpFinish,
+                        value = "",
                         iconColor = MaterialTheme.colors.primary
                     ){
-                        onDetailTest(it)
+                        onDetailTest(it.testUID)
                     }
                 }
                 item {

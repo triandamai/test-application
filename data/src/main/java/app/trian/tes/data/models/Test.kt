@@ -5,14 +5,17 @@ import com.google.gson.annotations.SerializedName
 
 @Keep
 data class Test(
+    var testUID:String="",
     @SerializedName("title")
-    var title:String,
+    var title:String="",
     @SerializedName("description")
-    var description:String,
-    @SerializedName("version")
-    var currentVersion:Int,
+    var description:String="",
+    @SerializedName("category")
+    var category:String="",
+    @SerializedName("creator")
+    var creator:String="",
     @SerializedName("createdAt")
-    var createdAt:Long,
+    var createdAt:Long=0,
     @SerializedName("updatedAt")
-    var updatedAt:Long
+    var updatedAt:Long=0
 )
