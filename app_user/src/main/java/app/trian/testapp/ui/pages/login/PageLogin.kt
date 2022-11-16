@@ -21,22 +21,16 @@ fun NavGraphBuilder.routeLogin(
     composable(Routes.Login) {
         val viewModel = hiltViewModel<LoginViewModel>()
         val ctx = LocalContext.current
-
         var loading by remember {
             mutableStateOf(false)
         }
-
         DialogLoading(show = loading)
-
         ScreenLogin(
-            onSignIn = {
-                email,password->
+            onSignIn = { email,password->
                 loading = true
-
                 viewModel.signIn(
                     email,password
-                ){
-                    success,message->
+                ){ success,message->
                     loading = false
                     if(success){
                         ctx.toastSuccess(message)
@@ -50,12 +44,9 @@ fun NavGraphBuilder.routeLogin(
                         ctx.toastError(message)
                     }
                 }
-
             },
             onSignUp = {
-                       router.navigate(Routes.Register){
-                           launchSingleTop = true
-                       }
+                router.navigate(Routes.Register){ launchSingleTop = true }
             },
             onResetPassword = {
                 router.navigate(Routes.ResetPassword){

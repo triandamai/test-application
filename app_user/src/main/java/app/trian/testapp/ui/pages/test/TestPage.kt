@@ -41,7 +41,6 @@ fun NavGraphBuilder.routeTest(
                         currentPage += 1
                     }
                 }
-
             },
             onPrev = {
                 if(currentPage >= 1){

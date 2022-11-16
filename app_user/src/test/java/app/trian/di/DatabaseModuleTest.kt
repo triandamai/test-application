@@ -1,7 +1,6 @@
 package app.trian.di
 
 import android.content.Context
-import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,5 +13,5 @@ import javax.inject.Named
 object DatabaseModuleTest {
     @Provides
     @Named("test_db")
-    fun provideInMemoryDb(@ApplicationContext context: Context) = Room.inMemoryDatabaseBuilder(context, CexupDatabase::class.java).allowMainThreadQueries().build()
+    fun provideInMemoryDb(@ApplicationContext context: Context) = ""
 }

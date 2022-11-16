@@ -35,7 +35,6 @@ import dagger.hilt.android.AndroidEntryPoint
  **/
 
 
-
 @OptIn(ExperimentalAnimationApi::class)
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -49,44 +48,45 @@ class MainActivity : ComponentActivity() {
             //make status bar custom color
             val systemUiController = rememberSystemUiController()
 
-            fun setStatusBar(color: Color, isDark:Boolean){
+            fun setStatusBar(color: Color, isDark: Boolean) {
                 systemUiController.setStatusBarColor(
-                    color=color,
+                    color = color,
                     darkIcons = isDark
                 )
             }
+
             val status = MaterialTheme.colors.background
 
             LaunchedEffect(key1 = Unit, block = {
-                setStatusBar(status,true)
+                setStatusBar(status, true)
             })
             TestTheme {
-                    AnimatedNavHost(
-                        navController = router,
-                        startDestination = Routes.Splash
+                AnimatedNavHost(
+                    navController = router,
+                    startDestination = Routes.Splash
+                ) {
+                    routeSplash(router)
+                    routeOnboard(router)
+                    routeResetPassword(router)
+                    routeLogin(router)
+                    routerRegister(router)
+                    navigation(
+                        route = Routes.Main.MAIN,
+                        startDestination = Routes.Main.Home
                     ) {
-                        routeSplash(router)
-                        routeOnboard(router)
-                        routeResetPassword(router)
-                        routeLogin(router)
-                        routerRegister(router)
-                        navigation(
-                            route = Routes.Main.MAIN,
-                            startDestination = Routes.Main.Home
-                        ){
-                            routeHome(router)
-                            routeProfile(router)
-                        }
-                        routeDetailTest( router)
-                        routeTest(router)
-                        routeFinishTest(router)
+                        routeHome(router)
+                        routeProfile(router)
                     }
+                    routeDetailTest(router)
+                    routeTest(router)
+                    routeFinishTest(router)
+                }
             }
         }
     }
 
-    fun restart(){
-        Intent(this,MainActivity::class.java).apply {
+    fun restart() {
+        Intent(this, MainActivity::class.java).apply {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }.also {
             startActivity(it)

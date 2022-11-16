@@ -30,7 +30,6 @@ data class DetailTestUIState(
     var loading:Boolean = true,
     var error:Boolean = false,
     var errorMessage:String = "",
-
     var title:String="Lorem Ipsum",
     var description:String="Lorem Ipsum",
     var createdAt:String="Lorem Ipsum",
